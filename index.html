@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <script src="/index.js"></script>
     <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,7 +18,8 @@
     <!-- Navbar -->
     <div id="nav">
       <nav>
-        <a href="/" class="nav__logo">Kailash Balakrishnan</a>
+        <a href="/" class="logo nav__logo">Kailash Balakrishnan</a>
+        <a href="/" class="logo nav__logo__mobile">Kailash</a>
         <div class="hamburger">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -30,7 +30,7 @@
             <li class="nav__link"><a href="#about">About</a></li>
             <li class="nav__link"><a href="#skills">Skills</a></li>
             <li class="nav__link"><a href="#projects">Projects</a></li>
-            <li class="nav__link"><a href="#contact">Contact</a></li>
+            <li class="nav__link"><a href="#footer">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -149,74 +149,72 @@
         <h1 class="projects__heading blue__bottom">Projects</h1>
         <div class="projects__content">
           
-          <div class="carleton__ai projects__tile">
-            <img src="./assets/carleton-ai.png" alt="Carleton AI Researchers Website" class="projects__pic">
+          <div class="carleton__ai project">
+            <a href="https://carleton-ai-research.onrender.com" target="_blank">            
+              <img src="./assets/carleton-ai.png" alt="Carleton AI Researchers Website" class="projects__pic">
+            </a>
             <div class="projects__info">
               <h2 class="projects__title">AI Researchers at Carleton University</h2>
-              <p class="projects__description">A website to find AI Researchers at Carleton University.</p>
-              <a href="https://carleton-ai-research.onrender.com" target="_blank" class="projects__link">View Website <i class="fa fa-arrow-right"></i> </a> 
-              <a href="" target="_blank" class="projects__read-more projects__link">Read More</a>
+              <p class="projects__description">A website to find AI Researchers at Carleton University. Built using React and Tailwind.</p>
+              <a href="https://carleton-ai-research.onrender.com" target="_blank" class="projects__link">View Website </a> 
+              <a href="https://github.com/Kailinho/carleton-ai-research" target="_blank" class="projects__read-more projects__link">GitHub Repository</a>
             </div>
           </div>
 
-          <div class="carleton__ai projects__tile">
-            <img src="./assets/carleton-ai.png" alt="Carleton AI Researchers Website" class="projects__pic">
+          <div class="carleton__ai project">
+            <a href="https://ai-keyword-extractor-kailinho.netlify.app" target="_blank"> 
+              <img src="./assets/keyword-extractor.png" alt="Carleton AI Researchers Website" class="projects__pic">
+            </a>
             <div class="projects__info">
-              <h2 class="projects__title">AI Researchers at Carleton University</h2>
-              <p class="projects__description">A website to find AI Researchers at Carleton University.</p>
+              <h2 class="projects__title">AI Keyword Extractor</h2>
+              <p class="projects__description">An app to extract keywords from a block of text using OpenAI's API.</p>
+              <a href="https://ai-keyword-extractor-kailinho.netlify.app" target="_blank" class="projects__link">View Website</a>
+              <a href="https://github.com/Kailinho/ai-keyword-extractor" target="_blank" class="projects__read-more projects__link">GitHub Repository</a>
+            </div>
+          </div>
+
+          <div class="carleton__ai project">
+            <a href=">" target="_blank"> 
+              <img src="./assets/portfolio.png" alt="Carleton AI Researchers Website" class="projects__pic">
+            </a>
+            <div class="projects__info">
+              <h2 class="projects__title">Personal Portfolio</h2>
+              <p class="projects__description">The website you are currently viewing. Personal portfolio built with pure HTML,CSS and JavaScript.</p>
               <a href=">" target="_blank" class="projects__link">View Website</a>
-              <a href="" target="_blank" class="projects__read-more projects__link">Read More</a>
+              <a href="https://github.com/Kailinho/portfolio" target="_blank" class="projects__read-more projects__link">GitHub Repository</a>
             </div>
           </div>
-
-          <div class="carleton__ai projects__tile">
-            <img src="./assets/carleton-ai.png" alt="Carleton AI Researchers Website" class="projects__pic">
-            <div class="projects__info">
-              <h2 class="projects__title">AI Researchers at Carleton University</h2>
-              <p class="projects__description">A website to find AI Researchers at Carleton University.</p>
-              <a href=">" target="_blank" class="projects__link">View Website</a>
-              <a href="" target="_blank" class="projects__read-more projects__link">Read More</a>
-            </div>
-          </div>
-
-          
-
         </div>    
       </div>
     </div>
    
-    <div class="footer">
+    <div class="footer" id="footer">
       <div class="container">
-         <h1 class="contact__heading">Contact me</h1>
+        <!-- <h1 class="contact__heading">Contact me</h1>
 
-        <form id="contact" action="" method="post">    
-          <div class="inputField">
-            <input type="name" name="name" id="name" placeholder="Your name" autocomplete="on" required>
+        <form id="contact" target="_blank" action="https://formsubmit.co/el/haboyi" method="POST">    
+
+            <input type="text" name="name" id="name" class="form-control" placeholder="Your name" required>
             <span class="valid_info_name"></span>
-          </div>
     
-          <div class="inputField">
-            <input type="Email" name="email" id="email" placeholder="Your email" required="" />
+            <input type="email" name="email" id="email" class="form-control" placeholder="Your email" required />
             <span class="valid_info_email"></span>
-          </div>
     
-          <div class="inputField">
-            <textarea name="message" id="message" placeholder="Your message"></textarea>
+            <textarea name="message" id="message" class="form-control" placeholder="Your message" required></textarea>
             <span class="valid_info_message"></span>
+    
+          <div class="btn">
+            <button type="submit" id="form-submit" >Send a message</button>
           </div>
     
-          <div class="inputField btn">
-            <button type="submit" id="form-submit" class="main-gradient-button" disabled>Send a message</button>
-          </div>
-    
-        </form>
+        </form> -->
 
 
         <div class="socials">
           <p>You can also connect with me on:</p>
-          <i class="devicon-github-original"></i>
-          <i class="devicon-linkedin-plain"></i>
-          <i class="fa fa-envelope"></i>
+          <a href="https://github.com/Kailinho" target="_blank"><i class="devicon-github-original"></i></a>
+          <a href="mailto:kailash22bala@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+          <a href="" target="_blank"><i class="devicon-linkedin-plain"></i></a>
         </div>
       </div>         
     </div>

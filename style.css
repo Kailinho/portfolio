@@ -27,6 +27,24 @@
 
 }
 
+/* Fade in animation */
+
+body {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Base/Global classes */
 
 a {
@@ -53,11 +71,11 @@ p {
 
 .container {
 
-  padding: 6rem 0;
+  padding: 6rem 3rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  max-width: 70rem;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -95,11 +113,16 @@ button:focus-visible {
 }
 
 /* Navbar */
+
+.nav__logo__mobile {
+  display: none;
+}
+
 #nav {
   max-width: 1280px;
   margin: 0 auto;
   font-size: 1.25rem;
-  padding: 2rem 4rem;
+  padding: 2rem 3rem;
 }
 
 nav {
@@ -108,7 +131,7 @@ nav {
   align-items: center;
 }
 
-.nav__logo {
+.logo {
   font-size: 1.75rem;
   color: var(--primary-blue);
 }
@@ -123,7 +146,7 @@ nav {
 
 /* Hamburger Menu */
 
-.bar{
+.bar {
   display: block;
   position: inherit;
   width: 25px;
@@ -134,11 +157,11 @@ nav {
   background-color: white;
 }
 
-.hamburger{
+.hamburger {
   display: none;
   cursor: pointer;
   position: relative;
-  right: -30%;
+  right: -40%;
   top: 10%;
 
 }
@@ -164,7 +187,7 @@ nav {
 
 .home {
   padding-top: 6rem;
-  height: 90vh;
+  min-height: 90vh;
 }
 
 .home__btn {
@@ -255,6 +278,7 @@ nav {
 }
 
 .skills__content {
+
   font-weight: 400;
 }
 
@@ -281,9 +305,10 @@ nav {
 /* Projects */
 
 .projects__content {
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 5rem;
 }
 
 
@@ -297,6 +322,7 @@ nav {
 
 .projects__description {
   font-weight: 400;
+  font-size: 1rem;
 }
 
 .projects__pic {
@@ -304,32 +330,58 @@ nav {
   width: 400px;
 }
 
+.projects__pic:hover {
+  transform: scale(1.1);
+  transition: ease-in 0.1s;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 .projects__link {
   color: var(--primary-dark-blue);
   font-weight: 500;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  padding: 0.25rem 0.5rem;
+  font-family: inherit;
+  color: var(--primary-dark-gray);
+  background-color: var(--primary-blue);
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
 
-.projects__tile {
+.projects__link:hover {
+  border-color: var(--primary-blue);
+  transition: border-color 0.25s;
+  color: var(--primary-dark-gray);
+}
+
+.project {
   display: flex;
   gap: 3rem;
 }
 
 /* Footer */
 
-.footer {
-  padding-bottom: 4rem;
-}
+
 
 .socials {
-  padding-top: 3rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   font-size: 2rem;
 }
 
-.socials:hover {
+.socials>p {
+  font-size: 2rem;
+}
+
+.socials>a {
+  margin: auto 0;
+}
+
+i:hover {
   cursor: pointer;
 }
 
@@ -344,8 +396,8 @@ textarea {
   width: 350px;
   position: relative;
   display: block;
-  background-color: #f4f7fb;
-  font-family: 'Open Sans', sans-serif;
+  background-color: var(--primary-light-gray);
+  color: var(--primary-dark-gray);
   font-size: 12px;
   font-weight: 500;
   border: none;
@@ -411,29 +463,53 @@ textarea {
 /* Responsive */
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
 
-  .nav{
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .socials>p {
+    font-size: 1rem;
+  }
+
+  .nav {
     margin-bottom: 10px;
   }
-  .hamburger{
-    display: block;
 
+  .nav__logo {
+    display: none;
   }
- .hamburger.active .bar:nth-child(2){
+
+  .nav__logo__mobile {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
- .hamburger.active .bar:nth-child(1){
+
+  .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
- .hamburger.active .bar:nth-child(3){
+
+  .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  .nav__items{
+  .nav__items {
     z-index: 10;
   }
-  .nav__list{
+
+  .nav__list {
     position: fixed;
     left: -100%;
     top: 70px;
@@ -443,19 +519,21 @@ textarea {
     text-align: center;
     transition: 0.3s;
   }
- .nav__link{
+
+  .nav__link {
     margin: 16px 0;
   }
- .nav__list.active{
+
+  .nav__list.active {
     left: 0;
   }
 
-  .home{
+  .home {
     margin-top: 7rem;
   }
 
   .container {
-    padding: 6rem;
+    padding: 4rem 6rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -463,15 +541,17 @@ textarea {
     margin: 0 auto;
   }
 
-  .projects__pic {
-    border-radius: 10px;
-    width: 250px;
+  .project {
+    flex-direction: column;
+    gap: 1rem;
   }
 
-  .icons{
+
+  .icons {
     width: 50px;
   }
 
+
+
+
 }
-
-
