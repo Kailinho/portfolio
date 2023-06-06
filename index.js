@@ -12,7 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
       }))
-  });
-  
 
-  
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          navMenu.style.top = "80px";
+        } else {
+          navMenu.style.top = "-300px";
+        }
+        prevScrollpos = currentScrollPos;
+      }
+
+});
