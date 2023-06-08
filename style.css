@@ -57,6 +57,42 @@ a:hover {
   color: var(--primary-blue);
 }
 
+#scroll__top {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#scroll__top::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: var(--primary-dark-blue);
+}
+
+#scroll__top:hover {
+  cursor: pointer;
+}
+
+#scroll__top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 
 h1 {
   font-size: 3rem;
@@ -335,7 +371,6 @@ nav {
 .projects__link {
   color: var(--primary-dark-blue);
   font-weight: 500;
-  border-radius: 10px;
   border: 2px solid transparent;
   padding: 0.25rem 0.5rem;
   font-family: inherit;
@@ -347,6 +382,8 @@ nav {
 
 .projects__link:hover {
   border-color: var(--primary-blue);
+
+  transform: scale(1.1);
   transition: border-color 0.25s;
   color: var(--primary-dark-gray);
 }
@@ -372,13 +409,14 @@ nav {
   font-size: 2rem;
 }
 
-.socials>a {
-  margin: auto 0;
-}
-
-i:hover {
+.socials__icons {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
   cursor: pointer;
 }
+
+
 
 
 
@@ -456,6 +494,11 @@ textarea {
 /* Responsive CSS for tablets and smaller laptops */
 
 @media screen and (max-width: 1024px) {
+
+  #scroll__top {
+    display: none;
+  }
+
   h1 {
     font-size: 2rem;
   }
@@ -548,6 +591,10 @@ textarea {
 
   .icons {
     width: 50px;
+  }
+
+  .socials__icons {
+    width: 30px;
   }
 }
 
