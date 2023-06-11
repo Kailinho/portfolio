@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           navMenu.style.top = "-300px";
         }
-        prevScrollpos = currentScrollPos;
+        prevScrollpos = currentScrollPos > 0 ? currentScrollPos : prevScrollpos
                 
         if (topPos > 100 ) {
           scrollBtn.classList.add("show");
