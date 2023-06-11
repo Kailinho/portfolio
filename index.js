@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var topPos = document.documentElement.scrollTop;
         var currentScrollPos = window.pageYOffset;
         
-        if ( (prevScrollpos > currentScrollPos) && topPos <= 20) {
+        if ( (prevScrollpos > currentScrollPos) && topPos <= 80) {
           navMenu.style.top = "80px";
         } else {
           navMenu.style.top = "-300px";
