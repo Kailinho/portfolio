@@ -162,6 +162,7 @@ button:focus-visible {
 }
 
 nav {
+  -webkit-overflow-scrolling: touch;
   display: flex;
   justify-content: space-between;
   align-items: center;
