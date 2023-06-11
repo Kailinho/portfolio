@@ -15,13 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }))
 
 
-      var prevScrollpos = window.pageYOffset;
+      var prevScrollpos = window.scrollY;
       
       window.onscroll = scrollAnimation;
       document.body.ontouchmove = scrollAnimation;
       function scrollAnimation() {
         var topPos = document.documentElement.scrollTop;
-        var currentScrollPos = window.pageYOffset;
+        var currentScrollPos = window.scrollY;
         
         if ( (prevScrollpos > currentScrollPos) && topPos <= 80) {
           navMenu.style.top = "80px";
