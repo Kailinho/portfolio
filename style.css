@@ -731,7 +731,6 @@ textarea {
 
   .projects__link {
     color: var(--primary-dark-blue);
-    border-radius: 10px;
     border: 2px solid transparent;
     padding: 0.25rem 0.5rem;
     font-family: inherit;

@@ -17,7 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       var prevScrollpos = window.pageYOffset;
       
-      window.onscroll = function() {
+      window.onscroll = scrollAnimation;
+      document.body.ontouchmove = scrollAnimation;
+      function scrollAnimation() {
         var topPos = document.documentElement.scrollTop;
         var currentScrollPos = window.pageYOffset;
         
