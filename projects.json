@@ -1,0 +1,59 @@
+[
+  {
+    "title": "AI Researchers at Carleton University",
+    "image": "./assets/carleton-ai.png",
+    "description": "A website to find AI Researchers at Carleton University. Built using React and Tailwind.",
+    "github": "https://github.com/Kailinho/carleton-ai-research",
+    "url": "https://carleton-ai-research.onrender.com",
+    "techstack": [
+      { "name": "React", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { "name": "TailwindCSS", "icon": "https://www.svgrepo.com/show/374118/tailwind.svg" }
+    ]
+  },
+  {
+    "title": "MIDI Piano Visualizer",
+    "image": "./assets/midi-visualizer.png",
+    "description": "A modern, interactive web application for visualizing and practicing piano music from MIDI files.",
+    "github": "https://github.com/Kailinho/piano-visualizer",
+    "url": "https://piano-visualizer-indol.vercel.app",
+    "techstack": [
+      { "name": "React", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { "name": "TypeScript", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { "name": "TailwindCSS", "icon": "https://www.svgrepo.com/show/374118/tailwind.svg" }
+    ]
+  },
+  {
+    "title": "Personal Portfolio",
+    "image": "./assets/portfolio.png",
+    "description": "The website you are currently viewing. Personal portfolio built with pure HTML, CSS and JavaScript.",
+    "github": "https://github.com/Kailinho/portfolio",
+    "url": "https://kailashbala.dev",
+    "techstack": [
+      { "name": "HTML", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+      { "name": "CSS", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+      { "name": "JavaScript", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" }
+    ]
+  },
+  {
+    "title": "Markdown Editor",
+    "image": "./assets/markdown-editor.png",
+    "description": "A simple, personal Markdown Editor built with React, TypeScript, and Vite.",
+    "github": "https://github.com/Kailinho/markdown-editor",
+    "url": "https://markdown-editor-sable-five.vercel.app",
+    "techstack": [
+      { "name": "React", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { "name": "TypeScript", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" }
+    ]
+  },
+  {
+    "title": "AI Keyword Extractor",
+    "image": "./assets/keyword-extractor.png",
+    "description": "An app to extract keywords from a block of text using OpenAI's API.",
+    "github": "https://github.com/Kailinho/ai-keyword-extractor",
+    "url": "https://ai-keyword-extractor-kailinho.netlify.app",
+    "techstack": [
+      { "name": "JavaScript", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+      { "name": "HTML", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" }
+    ]
+  }
+]
